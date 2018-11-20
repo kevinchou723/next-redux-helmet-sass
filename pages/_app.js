@@ -6,13 +6,14 @@ import { initStore } from '../store'
 import '../assets/styles/index.scss'
 
 class Application extends App {
-  static async getInitialProps ({ Component, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     return {
-      pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
+      pageProps: (Component.getInitialProps
+        ? await Component.getInitialProps(ctx) : {}),
     }
   }
 
-  render () {
+  render() {
     const { Component, pageProps, store } = this.props
     return (
       <Container>

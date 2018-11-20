@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { withRouter } from 'next/router'
 import Navigation from '../components/navigation'
-import ExampleContainer from '../containers/example-container';
+import ExampleContainer from '../containers/example-container'
 
 const exampleImage = 'https://cdn2.thecatapi.com/images/4p.jpg'
 

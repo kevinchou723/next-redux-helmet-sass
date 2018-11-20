@@ -43,6 +43,7 @@
       "ignoreComments": true,
       "ignoreStrings": true,
       "ignorePattern": "<p[^>]*>.*?</p>"
-    }]
+    }],
+    "semi": ["error", "never"]
   }
 }

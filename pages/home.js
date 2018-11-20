@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { withRouter } from 'next/router'
 import Navigation from '../components/navigation'
-import CloseSvg from '../assets/images/close.svg';
+import CloseSvg from '../assets/images/close.svg'
 
 class Home extends React.Component {
   static getInitialProps ({ store, isServer, req }) {
