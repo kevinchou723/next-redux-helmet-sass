@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('../fonts/PxGroteskRegular.eot');
+  src: url('../fonts/PxGroteskRegular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PxGroteskRegular.woff2') format('woff2'),
+      url('../fonts/PxGroteskRegular.woff') format('woff'),
+      url('../fonts/PxGroteskRegular.ttf') format('truetype'),
+      url('../fonts/PxGroteskRegular.svg#PxGroteskRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Px Grotesk';
+  src: url('../fonts/PxGrotesk-Bold.eot');
+  src: url('../fonts/PxGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PxGrotesk-Bold.woff2') format('woff2'),
+      url('../fonts/PxGrotesk-Bold.woff') format('woff'),
+      url('../fonts/PxGrotesk-Bold.ttf') format('truetype'),
+      url('../fonts/PxGrotesk-Bold.svg#PxGrotesk-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}

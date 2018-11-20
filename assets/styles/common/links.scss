@@ -1,0 +1,61 @@
+.arrow-link {
+  @include safe-flexbox;
+  transition: all $timing;
+  align-items: center;
+  color: white;
+  line-height: 1;
+
+  * {
+    transition: all $timing;
+    stroke: white;
+  }
+
+  svg {
+    position: relative;
+    margin-left: rem(10);
+  }
+
+  &:hover {
+    color: $accent-color-1;
+
+    * {
+      stroke: $accent-color-1
+    }
+  }
+
+  &.primary {
+    &:hover {
+      color: $accent-color-1;
+    }
+    * {
+      stroke: $accent-color-1;
+    }
+  }
+
+  &.secondary {
+    &:hover {
+      color: $accent-color-2;
+    }
+    * {
+      stroke: $accent-color-2;
+    }
+  }
+
+  &.tertiary {
+    &:hover {
+      color: $accent-color-3;
+    }
+    * {
+      stroke: $accent-color-3;
+    }
+  }
+
+  &.points-left {
+    svg {
+      margin-right: rem(10);
+      margin-left: unset;
+      top: 0;
+      transform: rotate(180deg);
+    }
+  }
+}
