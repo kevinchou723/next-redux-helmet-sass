@@ -7,14 +7,14 @@ import ExampleContainer from '../containers/example-container'
 const exampleImage = 'https://cdn2.thecatapi.com/images/4p.jpg'
 
 class ExamplePage extends Component {
-  static async getInitialProps ({ req, query }) {
+  static async getInitialProps({ req, query }) {
     if (req) {
       Helmet.renderStatic()
     }
     return {
       title: 'EXAMPLE TITLE!',
       description: 'EXAMPLE DESCRIPTION!',
-      id: query.id
+      id: query.id,
     }
   }
 
@@ -24,7 +24,7 @@ class ExamplePage extends Component {
     const meta = [
       { property: 'og:title', content: title },
       { property: 'og:image', content: exampleImage },
-      { property: 'og:description', content: description }
+      { property: 'og:description', content: description },
     ]
 
     return (
@@ -36,7 +36,7 @@ class ExamplePage extends Component {
         <Navigation />
         {id && <h1>{`My id is ${id}`}</h1>}
         this is Example page! I am Red!
-        <ExampleContainer/>
+        <ExampleContainer />
       </div>
     )
   }

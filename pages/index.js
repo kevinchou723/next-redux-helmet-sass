@@ -2,24 +2,24 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Navigation from '../components/navigation'
 import cat from '../assets/images/cat.jpg'
+
 class Index extends React.Component {
-  static getInitialProps ({ store, isServer, req }) {
+  static getInitialProps({ store, isServer, req }) {
     if (req) {
       Helmet.renderStatic()
     }
     return {
       isServer,
       title: 'Index TITLE!',
-      description: 'Index DESCRIPTION!'
+      description: 'Index DESCRIPTION!',
     }
   }
 
-  render () {
+  render() {
     const { title, description } = this.props
-
     const meta = [
       { property: 'og:title', content: title },
-      { property: 'og:description', content: description }
+      { property: 'og:description', content: description },
     ]
 
     return (
@@ -29,7 +29,7 @@ class Index extends React.Component {
           meta={meta}
         />
         <Navigation />
-        <img className='index__cat-wrapper' src={cat}/>
+        <img className='index__cat-wrapper' src={cat} alt='cat' />
         <p>This is Index page! I am Black!</p>
       </div>
     )

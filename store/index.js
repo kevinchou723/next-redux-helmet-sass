@@ -1,5 +1,5 @@
 import { createStore, applyMiddleware } from 'redux'
-import { composeWithDevTools } from 'redux-devtools-extension'
+import { composeWithDevTools } from 'redux-devtools-extension' /* eslint-disable-line */
 import { batching } from 'redux-batch-middleware'
 import middlewares from '../middlewares'
 import rootReducers from '../reducers'
