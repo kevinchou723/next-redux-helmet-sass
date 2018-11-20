@@ -4,6 +4,9 @@
 
 ## How to use
 
+This example contains page transitions when you navigate,
+see _app.js for implementation
+
 List of NEXT examples:
 
 https://github.com/zeit/next.js/tree/canary/examples
