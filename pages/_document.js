@@ -51,7 +51,7 @@ export default class extends Document {
           {
             !isDev && <link
               rel='stylesheet'
-              href='/_next/static/style.css'
+              href='/_next/assets/style.css'
             />
           }
         </Head>

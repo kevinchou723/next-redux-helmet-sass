@@ -1,10 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Navigation from '../components/navigation'
-
+import cat from '../assets/images/cat.jpg'
 class Index extends React.Component {
   static getInitialProps ({ store, isServer, req }) {
-
     if (req) {
       Helmet.renderStatic()
     }
@@ -22,6 +21,8 @@ class Index extends React.Component {
       { property: 'og:title', content: title },
       { property: 'og:description', content: description }
     ]
+
+    console.log('cat', cat);
     return (
       <div className='index__container'>
         <Helmet
@@ -29,7 +30,8 @@ class Index extends React.Component {
           meta={meta}
         />
         <Navigation />
-        This is Index page! I am Black!
+        <img className='index__cat-wrapper' src={cat}/>
+        <p>This is Index page! I am Black!</p>
       </div>
     )
   }
