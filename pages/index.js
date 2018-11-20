@@ -22,7 +22,6 @@ class Index extends React.Component {
       { property: 'og:description', content: description }
     ]
 
-    console.log('cat', cat);
     return (
       <div className='index__container'>
         <Helmet
