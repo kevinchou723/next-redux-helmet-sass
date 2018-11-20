@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Helmet from 'react-helmet'
 import { withRouter } from 'next/router'
 import Navigation from '../components/navigation'
-import ExampleContainer from '../containers/example-container';
+import ExampleContainer from '../containers/example-container'
 
 const exampleImage = 'https://cdn2.thecatapi.com/images/4p.jpg'
 
@@ -12,42 +12,47 @@ const exampleImage = 'https://cdn2.thecatapi.com/images/4p.jpg'
 */
 class ExamplePage extends Component {
   static pageTransitionDelayEnter = true
-  static async getInitialProps ({ req, query }) {
+
+  static async getInitialProps({ req, query }) {
     if (req) {
       Helmet.renderStatic()
     }
     return {
       title: 'EXAMPLE TITLE!',
       description: 'EXAMPLE DESCRIPTION!',
-      id: query.id
+      id: query.id,
     }
   }
 
   state = {
-    loaded: false
+    loaded: false,
   }
 
-  componentDidMount () {
+  componentDidMount() {
     // this is just a simple example to show loading component
     this.timeoutId = setTimeout(() => {
-      this.props.pageTransitionReadyToEnter()
+      const { pageTransitionReadyToEnter } = this.props
+      pageTransitionReadyToEnter()
       this.setState({ loaded: true })
     }, 2000)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     if (this.timeoutId) clearTimeout(this.timeoutId)
   }
 
   render() {
-    if (!this.state.loaded) return null
+    const { loaded } = this.state
+    const {
+      title, description, router, id,
+    } = this.props
+    if (!loaded) return null
 
-    const { title, description, router, id } = this.props
 
     const meta = [
       { property: 'og:title', content: title },
       { property: 'og:image', content: exampleImage },
-      { property: 'og:description', content: description }
+      { property: 'og:description', content: description },
     ]
 
     return (
@@ -59,7 +64,7 @@ class ExamplePage extends Component {
         <Navigation />
         {id && <h1>{`My id is ${id}`}</h1>}
         this is Example page! I am Red!
-        <ExampleContainer/>
+        <ExampleContainer />
       </div>
     )
   }

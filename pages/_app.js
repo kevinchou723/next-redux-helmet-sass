@@ -14,17 +14,7 @@ import Loader from '../components/loader'
   just remove it from this component and uninstall
   next-page-transitions from package.json
 */
-
-class Application extends App {
-  static async getInitialProps ({ Component, ctx }) {
-    return {
-      pageProps: (Component.getInitialProps ? await Component.getInitialProps(ctx) : {})
-    }
-  }
-
-  render () {
-    const { Component, pageProps, store } = this.props
-    const TIMEOUT = 400;
+const TIMEOUT = 400
 const transitionOpts = {
   timeout: TIMEOUT,
   classNames: 'page-transition',
@@ -32,10 +22,20 @@ const transitionOpts = {
   loadingDelay: 500,
   loadingTimeout: {
     enter: TIMEOUT,
-    exit: 0
+    exit: 0,
   },
-  loadingClassNames: 'loading-indicator'
+  loadingClassNames: 'loading-indicator',
 }
+class Application extends App {
+  static async getInitialProps({ Component, ctx }) {
+    return {
+      pageProps: (Component.getInitialProps
+        ? await Component.getInitialProps(ctx) : {}),
+    }
+  }
+
+  render() {
+    const { Component, pageProps, store } = this.props
     return (
       <Container>
         <Provider store={store}>
