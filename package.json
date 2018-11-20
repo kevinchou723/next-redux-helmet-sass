@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@zeit/next-sass": "1.0.1",
+    "babel-plugin-inline-react-svg": "1.0.1",
     "next": "latest",
+    "next-images": "1.0.1",
     "next-redux-wrapper": "latest",
     "next-routes": "1.4.2",
     "node-sass": "4.10.0",

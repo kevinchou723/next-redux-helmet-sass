@@ -1,3 +1,21 @@
 .home__container {
   color: green;
 }
+
+.home__close-icon-wrapper {
+  cursor: pointer;
+
+  &:hover {
+    svg {
+      path {
+        stroke: red;
+      }
+    }
+  }
+
+  svg {
+    path {
+      stroke: blue;
+    }
+  }
+}
