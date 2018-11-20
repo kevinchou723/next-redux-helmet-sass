@@ -1,0 +1,64 @@
+.view-container {
+  @include safe-flexbox;
+  flex-direction: column;
+  align-items: center;
+  background-color: $background-main;
+  min-height: 100vh;
+  color: $main-text;
+  padding-top: 8rem;
+
+  @include larger-than(mobile) {
+    padding-top: $desktop-nav-height;
+  }
+
+  &--alternate {
+    background-color: $background-alternate;
+  }
+
+  &.view-container--slim {
+    padding-top: 8.5em;
+
+    @include larger-than(mobile) {
+      padding-top: $desktop-nav-height;
+    }
+  }
+
+  .scrolled & {
+    padding-top: calc(#{$desktop-nav-height} - 1rem);
+  }
+}
+
+.max-width-container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: 0 $mobile-padding;
+
+  @include larger-than(mobile) {
+    padding: 0 $desktop-padding;
+  }
+}
+
+.padded-offset {
+  transition: padding $timing;
+  @include larger-than(mobile) {
+    padding-top: $view-container-desktop-padding;
+  }
+}
+
+.bordered-wrapper {
+  border-radius: $default-border-radius;
+}
+
+/**
+ * React Router Transition Wrappers
+ * Don't touch unless necessary
+ */
+.switch-wrapper {
+  position: relative;
+}
+
+.switch-wrapper > div {
+  position: absolute;
+  width: 100%;
+}

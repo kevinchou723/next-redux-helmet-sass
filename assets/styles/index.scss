@@ -1,8 +1,6 @@
-@import './example';
-@import './home';
-@import './navigation';
 
-.index__cat-wrapper {
-  width: 450px;
-  height: 500px;
-}
+@import './base/_index';
+@import './common/_index';
+
+@import './pages/_index';
+@import './components/_index';

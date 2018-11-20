@@ -1,0 +1,48 @@
+.two-col--mobile {
+  @include columns(2);
+}
+
+.two-col {
+  @include larger-than(tablet) {
+    @include columns(2);
+  }
+}
+
+.two-col--tablet {
+  @include larger-than(mobile) {
+    @include columns(2);
+  }
+}
+
+.two-col--desktop {
+  @include larger-than(tablet) {
+    @include columns(2);
+  }
+}
+
+.three-col {
+  @include larger-than(tablet) {
+    @include columns(3);
+  }
+}
+
+.three-col--tablet {
+  @include larger-than(mobile) {
+    @include columns(3);
+  }
+}
+
+.four-col {
+  @include larger-than(mobile) {
+    @include columns(2);
+  }
+  @include larger-than(tablet) {
+    @include columns(4);
+  }
+}
+
+.four-col--desktop {
+  @include larger-than(tablet) {
+    @include columns(4);
+  }
+}

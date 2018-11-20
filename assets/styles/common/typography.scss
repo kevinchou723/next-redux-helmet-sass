@@ -1,0 +1,87 @@
+$base-font: "ABC Normal", Helvetica, Arial, "Lucida Grande", sans-serif;
+$secondary-font: "Px Grotesk", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+html {
+  font-family: $base-font;
+  font-size: $base-font-size * 1px;
+  color: $color-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+pre {
+  display: inline-block;
+  background: #EEE;
+  padding: 0 8px;
+  margin: 0;
+  font-size: $base-font-size;
+  vertical-align: bottom;
+  border-radius: .3em;
+  border: 1px solid #DDD;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.base-font--regular {
+  font-family: $base-font;
+  font-weight: 400;
+}
+
+.base-font--medium {
+  font-family: $base-font;
+  font-weight: 500;
+}
+
+.secondary-font--regular {
+  font-family: $secondary-font;
+}
+
+.secondary-font--bold {
+  @extend .bold;
+  font-family: $secondary-font;
+}
+
+.secondary-font--regular {
+  font-weight: 400;
+  font-family: $secondary-font;
+}
+
+.text {
+  @include larger-than(mobile) {
+    font-size: rem(16);
+  }
+}
+
+.text--small {
+  font-size: rem(14);
+}
+
+.text--medium-small {
+  font-size: rem(13);
+
+  @include larger-than(mobile) {
+    font-size: rem(20);
+  }
+}
+
+.text--medium {
+  font-size: rem(30);
+  @include larger-than(mobile) {
+    font-size: rem(36);
+  }
+}
+
+.text--large {
+  font-size: rem(30);
+  @include larger-than(mobile) {
+    font-size: rem(56);
+  }
+}
+
+.text--xlarge {
+  @include larger-than(mobile) {
+    font-size: rem(74);
+  }
+}

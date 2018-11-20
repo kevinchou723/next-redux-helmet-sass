@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'ABC Normal';
+  src: url('../fonts/ABCNormal-Normal.eot');
+  src: url('../fonts/ABCNormal-Normal.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ABCNormal-Normal.woff2') format('woff2'),
+      url('../fonts/ABCNormal-Normal.woff') format('woff'),
+      url('../fonts/ABCNormal-Normal.ttf') format('truetype'),
+      url('../fonts/ABCNormal-Normal.svg#ABCNormal-Normal') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ABC Normal';
+  src: url('../fonts/ABCNormal-Medium.eot');
+  src: url('../fonts/ABCNormal-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ABCNormal-Medium.woff2') format('woff2'),
+      url('../fonts/ABCNormal-Medium.woff') format('woff'),
+      url('../fonts/ABCNormal-Medium.ttf') format('truetype'),
+      url('../fonts/ABCNormal-Medium.svg#ABCNormal-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
