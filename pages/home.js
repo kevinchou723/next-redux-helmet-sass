@@ -1,8 +1,9 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import { withRouter } from 'next/router'
 import Navigation from '../components/navigation'
 
-class Index extends React.Component {
+class Home extends React.Component {
   static getInitialProps ({ store, isServer, req }) {
 
     if (req) {
@@ -10,29 +11,28 @@ class Index extends React.Component {
     }
     return {
       isServer,
-      title: 'Index TITLE!',
-      description: 'Index DESCRIPTION!'
+      title: 'HOME TITLE!',
+      description: 'HOME DESCRIPTION!'
     }
   }
 
   render () {
     const { title, description } = this.props
-
     const meta = [
       { property: 'og:title', content: title },
       { property: 'og:description', content: description }
     ]
     return (
-      <div className='index__container'>
+      <div className='home__container'>
         <Helmet
           title={title}
           meta={meta}
         />
         <Navigation />
-        This is Index page! I am Black!
+        This is Home page! I am Green!
       </div>
     )
   }
 }
 
-export default Index
+export default withRouter(Home)
